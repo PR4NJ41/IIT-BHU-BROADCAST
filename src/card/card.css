@@ -1,0 +1,61 @@
+.mainBox {
+	width: -webkit-fill-available;
+	height: auto;
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	min-height: 100px;
+	box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.27);
+	padding: 0px;
+    margin-bottom: 70px;
+}
+
+.boxHeading {
+	font-size: 48px;
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+	margin: 40px 0px 10px 0px;
+}
+
+hr {
+	height: 2px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.159);
+	border: none;
+}
+
+.boxBody{
+    font-size: 24px;
+	font-family: "Montserrat", sans-serif;
+	text-align:justify;
+    padding: 30px 60px 30px 60px;
+}
+
+.userInfo{
+    font-size: 18px;
+	font-family: "Montserrat", sans-serif;
+	text-align:justify;
+    color: rgba(0, 0, 0, 0.6);
+    display: inline-flex;
+    user-select: none;
+}
+
+.infoBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 60px 30px 60px;
+
+}
+
+.okYaar{
+    display: inline-flex;
+    font-size: 18px;
+	font-family: "Montserrat", sans-serif;
+	text-align:justify;
+    color: rgba(0, 0, 0, 0.6);
+    display: inline-flex;
+    text-decoration: underline;
+    cursor: pointer;
+}
