@@ -1,9 +1,11 @@
 .mainBox {
+	max-width: 1440px;
 	width: -webkit-fill-available;
 	height: auto;
 	background-color: rgb(255, 255, 255);
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	border-radius: 20px;
 	min-height: 100px;
 	box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.27);
@@ -16,6 +18,7 @@
 	font-family: "Montserrat", sans-serif;
 	text-align: center;
 	margin: 40px 0px 10px 0px;
+	padding: 0px 40px 0px 40px;
 }
 
 hr {
@@ -58,4 +61,85 @@ hr {
     display: inline-flex;
     text-decoration: underline;
     cursor: pointer;
+}
+.mainw{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media screen and (width < 700px) {
+	
+}
+
+@media screen and (width < 400px) {
+	.mainBox {
+		max-width: 1440px;
+		width: -webkit-fill-available;
+		height: auto;
+		background-color: rgb(255, 255, 255);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 12px;
+		min-height: 100px;
+		box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.27);
+		padding: 0px;
+		margin-bottom: 40px;
+	}
+	
+	.boxHeading {
+		font-size: 18px;
+		font-family: "Montserrat", sans-serif;
+		text-align: center;
+		margin: 20px 0px 5px 0px;
+		padding: 0px 20px 0px 20px;
+	}
+	
+	hr {
+		height: 2px;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.159);
+		border: none;
+	}
+	
+	.boxBody{
+		font-size: 14px;
+		font-family: "Montserrat", sans-serif;
+		text-align:justify;
+		padding: 20px 20px 15px 20px;
+	}
+	
+	.userInfo{
+		font-size: 10px;
+		font-family: "Montserrat", sans-serif;
+		text-align:justify;
+		color: rgba(0, 0, 0, 0.6);
+		display: inline-flex;
+		user-select: none;
+	}
+	
+	.infoBox{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 0px 20px 15px 20px;
+	
+	}
+	
+	.okYaar{
+		display: inline-flex;
+		font-size: 10px;
+		font-family: "Montserrat", sans-serif;
+		text-align:justify;
+		color: rgba(0, 0, 0, 0.6);
+		display: inline-flex;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.mainw{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }

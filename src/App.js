@@ -1,14 +1,19 @@
 import "./App.css";
 import Card from "./card/card.js";
 import Blast from "./blast/blast";
+import UpdateBlast from "./blast/updateBlast";
 import { useState, useEffect } from "react";
 import { auth, provider } from "./firebase";
 import { signInWithPopup } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const [pop, setpop] = useState(false);
+	const [pop2, setpop2] = useState(false);
 	const [value, setValue] = useState();
 	const [username,setUsername] = useState("");
+	const [idd,setIdd] = useState("");
 	
 
 	const SignInWithGoogle = () => {
@@ -27,12 +32,16 @@ function App() {
 	useEffect(() => {
 		setValue(localStorage.getItem("userEmail"));
 		setUsername(localStorage.getItem("userName"));
-		console.log("sad")
 	});
 	const LogOut = () => {
 		localStorage.clear();
 		window.location.reload();
 	};
+	const handler = (id) => {
+		console.log("id is : ",id);
+		setpop2(true);
+		setIdd(id);
+	}
 	return (
 		<div className="main">
 			<div className="mainHeading">IIT BHU Broadcast</div>
@@ -49,8 +58,9 @@ function App() {
 						</button>
 						<button className="btn" onClick={LogOut}>Log Out</button>
 					</div>
-					<Card checkEmail={value} />
+					<Card checkEmail={value} getStoryId={handler}/>
 					<Blast trigger={pop} setTrigger={setpop}/>
+					<UpdateBlast trigger={pop2} setTrigger={setpop2} idk={idd} setIdk={setIdd}/>
 				</div>
 			) : (
 				<div className="noUserBox">

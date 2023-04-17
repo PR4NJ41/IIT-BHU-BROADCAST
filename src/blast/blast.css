@@ -70,3 +70,80 @@
 .cross:hover{
     background-color: rgb(255, 97, 97);
 }
+
+
+@media screen and (width < 400px) {
+    .blastMain {
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        top: 0px;
+        left: 0px;
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .blastBox {
+        max-width: 750px;
+        background-color: rgba(255, 255, 255);
+        width: 70vw;
+        height: auto; /* change to auto */
+        display: flex;
+        border-radius: 20px;
+        padding-bottom: 30px;
+        flex-direction: column;
+    }
+    
+    .blastForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .topBlastHeading{
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .blastHeading{
+        width: 70%;
+        font-size: 16px;
+        margin-bottom: 15px;
+        padding: 5px 10px;
+        border-radius: 7px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    
+    }
+    
+    .blastBody{
+        width: 70%;
+        font-size: 16px;
+        margin-bottom: 15px;
+        padding: 5px 10px;
+        border-radius: 7px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+    
+    .cross{
+        background-color: rgb(255, 255, 255);
+        align-self: end;
+        width: 20px;
+        height: auto;
+        padding: 5px 5px 5px 5px;
+        border-radius: 0px 20px 0px 20px;
+        cursor: pointer;
+        /* border-radius: 50%; */
+    }
+    .cross:hover{
+        background-color: rgb(255, 97, 97);
+    }
+    
+}
