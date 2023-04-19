@@ -44,7 +44,7 @@ const Card = ({ checkEmail, getStoryId }) => {
 							<div className="userInfo">
 								Posted By : {item.name}
 							</div>
-							<div className="userInfo">
+							<div className="userInfo2">
 								<div
 									className="okYaar"
 									onClick={(e) => getStoryId(item.id)}

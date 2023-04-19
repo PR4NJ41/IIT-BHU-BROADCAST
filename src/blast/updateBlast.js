@@ -13,15 +13,13 @@ function UpdateBlast({ trigger, setTrigger, idk, setIdk }) {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	// const docRef = doc(db, "stories","MF");
-
+	
 	const handleSubmit = async (e) => {
-		console.log(name);
 		e.preventDefault();
-		setEmail(localStorage.getItem("userEmail"));
-		console.log(name, "dsnjck");
 		const updateFile = {
 			heading: text1,
 			body: text2,
+			name: name,
 		};
 
 		try {
@@ -57,6 +55,8 @@ function UpdateBlast({ trigger, setTrigger, idk, setIdk }) {
 		return updateDoc(storyDoc, updatedStory);
 	};
 	useEffect(() => {
+		setEmail(localStorage.getItem("userEmail"));
+		setName(localStorage.getItem("userName"));
 		editHandler();
 		console.log("UPdater");
 	}, [idk]);
